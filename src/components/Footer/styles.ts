@@ -17,6 +17,13 @@ export const FooterContainer = styled.footer`
   p { 
     color: var(--text-title);
     font-size: .9rem;
+    a { 
+      color: var(--blue);
+      text-decoration: none;
+      &:hover {
+        border-bottom: 1px dotted var(--blue);
+      }
+    }
   }
 
 `;
