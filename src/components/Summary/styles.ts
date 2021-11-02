@@ -18,6 +18,7 @@ export const Container = styled.div`
     color: var(--text-title);
     @media (max-width:768px) {
       padding: 1.2rem 1.8rem;
+      min-width: 80vw;
     }
     header {
       display: flex;
