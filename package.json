@@ -1,9 +1,11 @@
 {
   "name": "dtmoney",
-  "version": "0.1.0",
+  "homepage": "https://alanpatrickk.github.io/dtmoney/",
+  "version": "0.1.3",
   "private": true,
   "dependencies": {
     "axios": "^0.24.0",
+    "gh-pages": "^3.2.3",
     "miragejs": "^0.1.42",
     "polished": "^4.1.3",
     "react": "^17.0.2",
@@ -23,13 +25,16 @@
     "@types/react-dom": "^17.0.0",
     "@types/react-modal": "^3.13.1",
     "@types/styled-components": "^5.1.15",
+    "cross-env": "^7.0.3",
     "typescript": "^4.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "cross-env NODE_ENV=production react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
