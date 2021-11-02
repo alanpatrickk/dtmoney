@@ -6,6 +6,7 @@ import { NewTransactionModal } from "./components/NewTransactionModal";
 import { TransactionsProvider } from "./hooks/useTransactions";
 
 import { GlobalStyle } from "./assets/styles/global";
+import { Footer } from "./components/Footer";
 
 Modal.setAppElement('#root');
 
@@ -27,6 +28,8 @@ export function App() {
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
 
       <Dashboard />
+
+      <Footer />
 
       <NewTransactionModal 
         isOpen={isNewTransactionModalOpen} 

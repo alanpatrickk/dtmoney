@@ -14,7 +14,18 @@ export const Content = styled.div`
   @media (max-width:768px) {
     justify-content: center;
     flex-wrap: wrap;
-  padding: 2rem 1rem 7rem;
+    padding: 2rem 1rem 7rem;
+  }
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    small {
+      color: var(--background);
+      margin-left: 1rem;
+      margin-top: .4rem;
+      filter: opacity(70%);
+    }
   }
   button { 
     font-size: 1rem;

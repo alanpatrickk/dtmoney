@@ -24,6 +24,11 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
 
   async function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
+
+    if(!title) return;
+    if(!amount) return;
+    if(!category) return;
+
     await createNewTransaction({
       title,
       amount,
@@ -95,9 +100,11 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
           value={category}
           onChange={event => setCategory(event.target.value)}
         >
+          <option>Selecione...</option>
+          <option value="Freelas">Freelas</option>
           <option value="Casa">Casa</option>
-          <option value="Trabalho">Trabalho</option>
           <option value="Transporte">Transporte</option>
+          <option value="Hobbies">Hobbies</option>
         </select>
 
         <button type="submit">
